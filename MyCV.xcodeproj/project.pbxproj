@@ -13,7 +13,9 @@
 		FA8443272278A1F100DC3CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8443262278A1F100DC3CC1 /* Assets.xcassets */; };
 		FA84432A2278A1F100DC3CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8443282278A1F100DC3CC1 /* LaunchScreen.storyboard */; };
 		FA8443362279C43200DC3CC1 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8443352279C43200DC3CC1 /* Walkthrough.storyboard */; };
-		FA8443382279EDF600DC3CC1 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8443372279EDF600DC3CC1 /* WalkthroughViewController.swift */; };
+		FA8443382279EDF600DC3CC1 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8443372279EDF600DC3CC1 /* WalkthroughContentViewController.swift */; };
+		FA84433B227A4D7100DC3CC1 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84433A227A4D7100DC3CC1 /* UITableViewCell+Extension.swift */; };
+		FA84433D227A4F2E00DC3CC1 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84433C227A4F2E00DC3CC1 /* WalkthroughPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		FA8443292278A1F100DC3CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA84432B2278A1F100DC3CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8443352279C43200DC3CC1 /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
-		FA8443372279EDF600DC3CC1 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		FA8443372279EDF600DC3CC1 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		FA84433A227A4D7100DC3CC1 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		FA84433C227A4F2E00DC3CC1 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				FA8443332278AB3500DC3CC1 /* View */,
 				FA8443342278AB4800DC3CC1 /* Controller */,
 				FA8443312278AACD00DC3CC1 /* Supporting Files */,
+				FA844339227A4D1900DC3CC1 /* Extensions */,
 			);
 			path = MyCV;
 			sourceTree = "<group>";
@@ -97,9 +102,18 @@
 			isa = PBXGroup;
 			children = (
 				FA8443212278A1EE00DC3CC1 /* ViewController.swift */,
-				FA8443372279EDF600DC3CC1 /* WalkthroughViewController.swift */,
+				FA8443372279EDF600DC3CC1 /* WalkthroughContentViewController.swift */,
+				FA84433C227A4F2E00DC3CC1 /* WalkthroughPageViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA844339227A4D1900DC3CC1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA84433A227A4D7100DC3CC1 /* UITableViewCell+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8443382279EDF600DC3CC1 /* WalkthroughViewController.swift in Sources */,
+				FA8443382279EDF600DC3CC1 /* WalkthroughContentViewController.swift in Sources */,
 				FA8443222278A1EE00DC3CC1 /* ViewController.swift in Sources */,
+				FA84433D227A4F2E00DC3CC1 /* WalkthroughPageViewController.swift in Sources */,
 				FA8443202278A1EE00DC3CC1 /* AppDelegate.swift in Sources */,
+				FA84433B227A4D7100DC3CC1 /* UITableViewCell+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -90,21 +90,57 @@
             </objects>
             <point key="canvasLocation" x="54" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--Walkthrough Content View Controller-->
         <scene sceneID="hIS-Ol-0CX">
             <objects>
-                <viewController id="WB3-3f-Ekf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="WB3-3f-Ekf" customClass="WalkthroughContentViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pYw-sD-jVX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="691.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-yz-FDJ">
+                                <rect key="frame" x="24" y="94" width="366" height="441"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lca-ch-KW8">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Lca-ch-KW8" secondAttribute="height" multiplier="366:329" id="5rW-aT-B5X"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3i9-8A-3cC">
+                                        <rect key="frame" x="151.5" y="364" width="63.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mo-45-XLc">
+                                        <rect key="frame" x="167" y="420.5" width="32.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l6Q-i7-Kfj" firstAttribute="trailing" secondItem="Fwn-yz-FDJ" secondAttribute="trailing" constant="24" id="Fa7-c5-DFr"/>
+                            <constraint firstItem="l6Q-i7-Kfj" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fwn-yz-FDJ" secondAttribute="bottom" constant="16" id="GN0-yD-Lez"/>
+                            <constraint firstItem="Fwn-yz-FDJ" firstAttribute="leading" secondItem="l6Q-i7-Kfj" secondAttribute="leading" constant="24" id="JC4-ow-oaQ"/>
+                            <constraint firstItem="Fwn-yz-FDJ" firstAttribute="top" secondItem="l6Q-i7-Kfj" secondAttribute="top" constant="50" id="fiX-BU-g8q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="l6Q-i7-Kfj"/>
                     </view>
                     <size key="freeformSize" width="414" height="691.5"/>
+                    <connections>
+                        <outlet property="bodyTextLabel" destination="2mo-45-XLc" id="6vc-d2-cSM"/>
+                        <outlet property="contentImageView" destination="Lca-ch-KW8" id="z1M-2Y-sbf"/>
+                        <outlet property="headerLabel" destination="3i9-8A-3cC" id="4Ly-U0-WBf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXT-Ek-rjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="35"/>
+            <point key="canvasLocation" x="744.92753623188412" y="34.821428571428569"/>
         </scene>
     </scenes>
 </document>
