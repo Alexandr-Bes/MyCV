@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iyh-5M-dGa">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Walkthrough View Controller-->
         <scene sceneID="GVT-MF-Ue4">
             <objects>
-                <viewController id="Iyh-5M-dGa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughViewController" id="Iyh-5M-dGa" customClass="WalkthroughViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JcS-FD-1HO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,9 @@
                                                 <state key="normal" title="NEXT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextButtonPressedWithSender:" destination="Iyh-5M-dGa" eventType="touchUpInside" id="1sa-aM-Hd4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUg-0I-acO">
                                                 <rect key="frame" x="74.5" y="111" width="41" height="39"/>
@@ -53,18 +56,21 @@
                                                 <state key="normal" title="Skip">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="skipButtonPressedWithSender:" destination="Iyh-5M-dGa" eventType="touchUpInside" id="gdq-Qn-Zo7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.61176470588235299" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.87097042798995972" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="R8m-Lp-hdO" firstAttribute="centerX" secondItem="kcz-Im-MI4" secondAttribute="centerX" id="6JU-7E-onu"/>
                                     <constraint firstItem="R8m-Lp-hdO" firstAttribute="centerY" secondItem="kcz-Im-MI4" secondAttribute="centerY" id="Xxh-Sd-hNi"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.87097042798995972" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="amk-3h-Tde" firstAttribute="leading" secondItem="zgd-M1-jRO" secondAttribute="leading" id="AaK-5A-def"/>
                             <constraint firstItem="kcz-Im-MI4" firstAttribute="leading" secondItem="zgd-M1-jRO" secondAttribute="leading" id="Fxk-ih-Czd"/>
@@ -77,15 +83,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zgd-M1-jRO"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="FvQ-LS-maj" id="3V6-Dk-6Yz"/>
+                        <outlet property="pageControll" destination="kmN-tu-L03" id="upW-Uj-XPN"/>
+                        <outlet property="skipButton" destination="NUg-0I-acO" id="52H-gZ-93S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPr-nc-f70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-652.17391304347836" y="34.821428571428569"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="ai6-Dg-065">
             <objects>
-                <pageViewController storyboardIdentifier="WalktroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="JH2-Pb-S3s" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthroughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="JH2-Pb-S3s" customClass="WalkthroughPageViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9R2-L7-x4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54" y="36"/>
@@ -99,23 +110,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Fwn-yz-FDJ">
-                                <rect key="frame" x="24" y="94" width="366" height="441"/>
+                                <rect key="frame" x="24" y="94" width="366" height="454.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lca-ch-KW8">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lca-ch-KW8">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Lca-ch-KW8" secondAttribute="height" multiplier="366:329" id="5rW-aT-B5X"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3i9-8A-3cC">
-                                        <rect key="frame" x="151.5" y="364" width="63.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3i9-8A-3cC">
+                                        <rect key="frame" x="141" y="364" width="84" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mo-45-XLc">
-                                        <rect key="frame" x="167" y="420.5" width="32.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="164" y="430.5" width="38" height="24"/>
+                                        <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>

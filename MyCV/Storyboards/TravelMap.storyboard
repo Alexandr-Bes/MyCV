@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KhQ-F7-z49">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="ceA-vk-Cgn">
+            <objects>
+                <viewController id="KhQ-F7-z49" customClass="MapViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NmU-8D-58w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-77-jZU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eYG-77-jZU" firstAttribute="trailing" secondItem="XFh-ox-rgQ" secondAttribute="trailing" id="9rG-Pv-Z7W"/>
+                            <constraint firstItem="eYG-77-jZU" firstAttribute="top" secondItem="NmU-8D-58w" secondAttribute="top" id="RdJ-Ko-aJB"/>
+                            <constraint firstItem="eYG-77-jZU" firstAttribute="leading" secondItem="XFh-ox-rgQ" secondAttribute="leading" id="j4q-c2-k3C"/>
+                            <constraint firstItem="eYG-77-jZU" firstAttribute="bottom" secondItem="XFh-ox-rgQ" secondAttribute="bottom" id="lgB-kc-ceH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XFh-ox-rgQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="travelMap" id="zqz-0h-wHX"/>
+                    <navigationItem key="navigationItem" id="8n0-WX-DBa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6W-HU-2eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476.811594202899" y="625.44642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="travelMap" width="25" height="25"/>
+    </resources>
+</document>

@@ -29,7 +29,7 @@ class WalkthroughContentViewController: UIViewController {
     var index = 0
     var headerText = ""
     var bodyText = ""
-    var contentImage = #imageLiteral(resourceName: "walthr")
+    var contentImage = #imageLiteral(resourceName: "walkthrough")
 
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -43,6 +43,10 @@ class WalkthroughContentViewController: UIViewController {
         headerLabel.text = headerText
         bodyTextLabel.text = bodyText
         contentImageView.image = contentImage
+        contentImageView.layer.cornerRadius = 10.0
+        contentImageView.clipsToBounds = true
+        let backgroundColor = UIColor(red: 72/255, green: 219/255, blue: 251/255, alpha: 1.0)
+        view.backgroundColor = backgroundColor
     }
 
     

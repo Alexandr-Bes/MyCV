@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kkA-pa-8da">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My CV-->
+        <scene sceneID="WtH-Bx-EbP">
+            <objects>
+                <viewController id="Wgh-sh-Zjs" customClass="MyCVViewController" customModule="MyCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H76-2U-ET6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YfK-4o-5cn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCVCell" id="ZJy-0Z-g0P">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZJy-0Z-g0P" id="Zka-p2-fjo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YfK-4o-5cn" firstAttribute="leading" secondItem="BXp-ap-N7D" secondAttribute="leading" id="1BY-Nu-fpj"/>
+                            <constraint firstItem="YfK-4o-5cn" firstAttribute="bottom" secondItem="BXp-ap-N7D" secondAttribute="bottom" id="ApW-OB-CLu"/>
+                            <constraint firstItem="YfK-4o-5cn" firstAttribute="top" secondItem="BXp-ap-N7D" secondAttribute="top" id="Kt3-44-T9R"/>
+                            <constraint firstItem="YfK-4o-5cn" firstAttribute="trailing" secondItem="BXp-ap-N7D" secondAttribute="trailing" id="wZ3-rA-lBs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BXp-ap-N7D"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Resume" image="resume" id="P1j-Qv-mse"/>
+                    <navigationItem key="navigationItem" title="My CV" id="rE5-GN-szB"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myCVTableView" destination="YfK-4o-5cn" id="cMo-97-vl1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flR-4S-yk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1091.304347826087" y="60.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kE8-6d-Jcn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kkA-pa-8da" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h8i-fg-2tn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wgh-sh-Zjs" kind="relationship" relationship="rootViewController" id="twW-J1-PY0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVy-iM-OR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="61"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="resume" width="25" height="25"/>
+    </resources>
+</document>
