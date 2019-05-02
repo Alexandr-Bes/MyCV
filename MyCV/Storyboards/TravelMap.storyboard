@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-77-jZU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eYG-77-jZU" firstAttribute="trailing" secondItem="XFh-ox-rgQ" secondAttribute="trailing" id="9rG-Pv-Z7W"/>
+                            <constraint firstAttribute="bottom" secondItem="eYG-77-jZU" secondAttribute="bottom" id="94R-Ev-hE9"/>
+                            <constraint firstItem="eYG-77-jZU" firstAttribute="trailing" secondItem="NmU-8D-58w" secondAttribute="trailing" id="9rG-Pv-Z7W"/>
                             <constraint firstItem="eYG-77-jZU" firstAttribute="top" secondItem="NmU-8D-58w" secondAttribute="top" id="RdJ-Ko-aJB"/>
-                            <constraint firstItem="eYG-77-jZU" firstAttribute="leading" secondItem="XFh-ox-rgQ" secondAttribute="leading" id="j4q-c2-k3C"/>
-                            <constraint firstItem="eYG-77-jZU" firstAttribute="bottom" secondItem="XFh-ox-rgQ" secondAttribute="bottom" id="lgB-kc-ceH"/>
+                            <constraint firstItem="eYG-77-jZU" firstAttribute="leading" secondItem="NmU-8D-58w" secondAttribute="leading" id="j4q-c2-k3C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XFh-ox-rgQ"/>
                     </view>

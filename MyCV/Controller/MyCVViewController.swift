@@ -21,15 +21,6 @@ class MyCVViewController: UIViewController, UITableViewDataSource {
     // MARK: - Outlets
     @IBOutlet weak var myCVTableView: UITableView!
 
-
-    @IBAction func linkPressed(_ sender: Any) {
-        guard let url = URL(string: "https://github.com/Alexandr-Bes") else { return }
-
-        let svc = SFSafariViewController(url: url)
-        present(svc, animated: true, completion: nil)
-
-    }
-
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,11 +38,12 @@ class MyCVViewController: UIViewController, UITableViewDataSource {
 
     // MARK: - Table View Data Source Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = UITableViewCell()
+        return cell
     }
 
     // MARK: Private Methods
