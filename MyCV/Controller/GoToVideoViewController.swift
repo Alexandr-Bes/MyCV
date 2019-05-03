@@ -33,20 +33,18 @@ class GoToVideoViewController: UIViewController {
     }
 
     private func playVideo() {
-        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        let player = AVPlayer(url: videoURL!)
+        guard let path = Bundle.main.path(forResource: "movie", ofType: "mov") else {
+            debugPrint("Video not found")
+            showDefaultAlert(title: "Oops", message: "Something went wrong and unfortunately the video not found 😥")
+            return
+        }
+
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
-        self.present(playerViewController, animated: true) {
+        present(playerViewController, animated: true) {
             playerViewController.player?.play()
         }
-    }
-
-    private func displayMessage(_ userMessage: String) -> Void {
-        let alertController = UIAlertController(title: "Oops", message: userMessage, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
     }
 
 }

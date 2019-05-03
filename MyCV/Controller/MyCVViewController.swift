@@ -115,6 +115,7 @@ class MyCVViewController: UIViewController, UITableViewDataSource {
         myCVTableView.register(UINib(nibName: MyCVTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MyCVTableViewCell.identifier)
         myCVTableView.register(UINib(nibName: KeyInfoCell.identifier, bundle: nil), forCellReuseIdentifier: KeyInfoCell.identifier)
         myCVTableView.register(UINib(nibName: ExperienceAndCoursesCell.identifier, bundle: nil), forCellReuseIdentifier: ExperienceAndCoursesCell.identifier)
+        myCVTableView.allowsSelection = false
     }
 
 

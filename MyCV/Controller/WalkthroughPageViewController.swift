@@ -17,8 +17,8 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
 
     // MARK: - Properties
     weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
-    private var pageHeaders = ["HELLO!", "", ""]
-    private var pageBodyText = ["My name is Alexander. ", "BlyaHow are youHow are youHow are youut", "So this is MyCV app that I've created to show you "]
+    private var pageHeaders = ["Hello!", "", ""]
+    private var pageBodyText = ["My name is Alexander and I really admire iOS Development", "I love Apple products, its quality, reliability, design, speed, and many other", "And here is MyCV app that I've created to present to you. Enjoy watching"]
     var currentIndex = 0
     private struct Constants {
         static let walkthroughStoryboard = UIStoryboard(name: "Walkthrough", bundle: nil)
