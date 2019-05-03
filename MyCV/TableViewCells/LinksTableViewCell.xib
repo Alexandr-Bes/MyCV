@@ -19,30 +19,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="315" height="42.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAy-4N-FI3">
-                        <rect key="frame" x="16" y="11" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcZ-Xa-GNM">
-                        <rect key="frame" x="257" y="11" width="42" height="21"/>
+                        <rect key="frame" x="82" y="11" width="217" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JG6-bK-NAW">
+                        <rect key="frame" x="16" y="2.5" width="50" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="AIT-Ih-3Go"/>
+                            <constraint firstAttribute="height" constant="38" id="iDU-3v-hcH"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="UcZ-Xa-GNM" firstAttribute="leading" secondItem="JG6-bK-NAW" secondAttribute="trailing" constant="16" id="16Z-GV-J94"/>
                     <constraint firstItem="UcZ-Xa-GNM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1UM-kv-4Qn"/>
-                    <constraint firstItem="lAy-4N-FI3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Eob-jg-uUX"/>
+                    <constraint firstItem="JG6-bK-NAW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Kjz-TV-ycr"/>
                     <constraint firstAttribute="trailing" secondItem="UcZ-Xa-GNM" secondAttribute="trailing" constant="16" id="NYQ-Kr-sNb"/>
-                    <constraint firstItem="lAy-4N-FI3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RjP-Qf-jy7"/>
+                    <constraint firstItem="JG6-bK-NAW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WNO-tg-Kru"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="iconImageView" destination="JG6-bK-NAW" id="akj-ZR-Fen"/>
                 <outlet property="linkLabel" destination="UcZ-Xa-GNM" id="JOi-Ek-hyx"/>
-                <outlet property="linkNameLabel" destination="lAy-4N-FI3" id="Wzg-i6-gEF"/>
             </connections>
             <point key="canvasLocation" x="141.30434782608697" y="105.46875"/>
         </tableViewCell>

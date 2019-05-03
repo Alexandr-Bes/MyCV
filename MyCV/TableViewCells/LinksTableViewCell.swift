@@ -9,12 +9,26 @@
 import UIKit
 
 class LinksTableViewCell: UITableViewCell {
-    @IBOutlet weak var linkNameLabel: UILabel!
-    @IBOutlet weak var linkLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+
+    // MARK: - Outlets
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var linkLabel: UILabel! {
+        didSet {
+            linkLabel.numberOfLines = 2
+        }
     }
     
+    var cellModel: Links? {
+        didSet {
+            guard let cellModel = cellModel else {
+                return
+            }
+            setupUI(cellModel: cellModel)
+        }
+    }
+
+    private func setupUI(cellModel: Links) {
+        
+    }
+
 }

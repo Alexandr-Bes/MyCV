@@ -29,6 +29,7 @@ class GoToVideoViewController: UIViewController {
     private func setupUI() {
         playButton.layer.cornerRadius = 12
         playButton.clipsToBounds = true
+        showDefaultAlert(title: "Hi there!", message: "Here is the video of my finished projects. To tell the truth, it is the main issue why my project is so big, so just press the play button and enjoy the video 🙃")
     }
 
     private func playVideo() {
@@ -39,6 +40,13 @@ class GoToVideoViewController: UIViewController {
         self.present(playerViewController, animated: true) {
             playerViewController.player?.play()
         }
+    }
+
+    private func displayMessage(_ userMessage: String) -> Void {
+        let alertController = UIAlertController(title: "Oops", message: userMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }

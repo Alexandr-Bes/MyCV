@@ -1,5 +1,5 @@
 //
-//  TextLabelsModel.swift
+//  CVModel.swift
 //  MyCV
 //
 //  Created by Alexandr on 5/3/19.

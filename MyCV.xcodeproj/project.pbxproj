@@ -28,11 +28,13 @@
 		FA844353227B97F900DC3CC1 /* LinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA844351227B97F900DC3CC1 /* LinksTableViewCell.swift */; };
 		FA844354227B97F900DC3CC1 /* LinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA844352227B97F900DC3CC1 /* LinksTableViewCell.xib */; };
 		FA844356227B9C9200DC3CC1 /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA844355227B9C9200DC3CC1 /* LinksViewController.swift */; };
-		FADE1557227C70CA0008476C /* TextLabelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1556227C70CA0008476C /* TextLabelsModel.swift */; };
+		FADE1557227C70CA0008476C /* CVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1556227C70CA0008476C /* CVModel.swift */; };
 		FADE155A227C92760008476C /* KeyInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1558227C92760008476C /* KeyInfoCell.swift */; };
 		FADE155B227C92760008476C /* KeyInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADE1559227C92760008476C /* KeyInfoCell.xib */; };
 		FADE155E227C929B0008476C /* ExperienceAndCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE155C227C929B0008476C /* ExperienceAndCoursesCell.swift */; };
 		FADE155F227C929B0008476C /* ExperienceAndCoursesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADE155D227C929B0008476C /* ExperienceAndCoursesCell.xib */; };
+		FADE1561227CCCF10008476C /* LinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1560227CCCF10008476C /* LinksModel.swift */; };
+		FADE1563227CD9B30008476C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1562227CD9B30008476C /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,11 +61,13 @@
 		FA844351227B97F900DC3CC1 /* LinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksTableViewCell.swift; sourceTree = "<group>"; };
 		FA844352227B97F900DC3CC1 /* LinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinksTableViewCell.xib; sourceTree = "<group>"; };
 		FA844355227B9C9200DC3CC1 /* LinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
-		FADE1556227C70CA0008476C /* TextLabelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelsModel.swift; sourceTree = "<group>"; };
+		FADE1556227C70CA0008476C /* CVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVModel.swift; sourceTree = "<group>"; };
 		FADE1558227C92760008476C /* KeyInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyInfoCell.swift; sourceTree = "<group>"; };
 		FADE1559227C92760008476C /* KeyInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyInfoCell.xib; sourceTree = "<group>"; };
 		FADE155C227C929B0008476C /* ExperienceAndCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceAndCoursesCell.swift; sourceTree = "<group>"; };
 		FADE155D227C929B0008476C /* ExperienceAndCoursesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceAndCoursesCell.xib; sourceTree = "<group>"; };
+		FADE1560227CCCF10008476C /* LinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksModel.swift; sourceTree = "<group>"; };
+		FADE1562227CD9B30008476C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +123,8 @@
 		FA8443322278AB2B00DC3CC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FADE1556227C70CA0008476C /* TextLabelsModel.swift */,
+				FADE1556227C70CA0008476C /* CVModel.swift */,
+				FADE1560227CCCF10008476C /* LinksModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				FA84433A227A4D7100DC3CC1 /* UITableViewCell+Extension.swift */,
+				FADE1562227CD9B30008476C /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,12 +171,12 @@
 			children = (
 				FA84434B227B4FDE00DC3CC1 /* MyCVTableViewCell.swift */,
 				FA84434C227B4FDE00DC3CC1 /* MyCVTableViewCell.xib */,
-				FA844351227B97F900DC3CC1 /* LinksTableViewCell.swift */,
-				FA844352227B97F900DC3CC1 /* LinksTableViewCell.xib */,
 				FADE1558227C92760008476C /* KeyInfoCell.swift */,
 				FADE1559227C92760008476C /* KeyInfoCell.xib */,
 				FADE155C227C929B0008476C /* ExperienceAndCoursesCell.swift */,
 				FADE155D227C929B0008476C /* ExperienceAndCoursesCell.xib */,
+				FA844351227B97F900DC3CC1 /* LinksTableViewCell.swift */,
+				FA844352227B97F900DC3CC1 /* LinksTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADE1563227CD9B30008476C /* UIViewController+Extension.swift in Sources */,
 				FA844356227B9C9200DC3CC1 /* LinksViewController.swift in Sources */,
 				FA8443382279EDF600DC3CC1 /* WalkthroughContentViewController.swift in Sources */,
 				FADE155E227C929B0008476C /* ExperienceAndCoursesCell.swift in Sources */,
@@ -262,7 +269,8 @@
 				FADE155A227C92760008476C /* KeyInfoCell.swift in Sources */,
 				FA844350227B8D4700DC3CC1 /* GoToVideoViewController.swift in Sources */,
 				FA84433D227A4F2E00DC3CC1 /* WalkthroughPageViewController.swift in Sources */,
-				FADE1557227C70CA0008476C /* TextLabelsModel.swift in Sources */,
+				FADE1561227CCCF10008476C /* LinksModel.swift in Sources */,
+				FADE1557227C70CA0008476C /* CVModel.swift in Sources */,
 				FA84433F227AD64200DC3CC1 /* WalkthroughViewController.swift in Sources */,
 				FA844353227B97F900DC3CC1 /* LinksTableViewCell.swift in Sources */,
 				FA84434D227B4FDE00DC3CC1 /* MyCVTableViewCell.swift in Sources */,
