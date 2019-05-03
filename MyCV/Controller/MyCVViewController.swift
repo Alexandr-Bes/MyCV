@@ -118,9 +118,5 @@ class MyCVViewController: UIViewController, UITableViewDataSource {
     }
 
 
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        print("Hello World!")
-    }
-
 }
 

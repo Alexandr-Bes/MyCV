@@ -34,6 +34,9 @@
                     <tabBarItem key="tabBarItem" title="Map" image="travelMap" id="zqz-0h-wHX"/>
                     <navigationItem key="navigationItem" id="8n0-WX-DBa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="eYG-77-jZU" id="v6P-zx-Wng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6W-HU-2eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
