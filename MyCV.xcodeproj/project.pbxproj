@@ -35,7 +35,7 @@
 		FADE155F227C929B0008476C /* ExperienceAndCoursesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADE155D227C929B0008476C /* ExperienceAndCoursesCell.xib */; };
 		FADE1561227CCCF10008476C /* LinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1560227CCCF10008476C /* LinksModel.swift */; };
 		FADE1563227CD9B30008476C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1562227CD9B30008476C /* UIViewController+Extension.swift */; };
-		FADE1565227CF4BC0008476C /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = FADE1564227CF4BC0008476C /* movie.mov */; };
+		FADE1569227DC19F0008476C /* Movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = FADE1568227DC19F0008476C /* Movie.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +69,7 @@
 		FADE155D227C929B0008476C /* ExperienceAndCoursesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceAndCoursesCell.xib; sourceTree = "<group>"; };
 		FADE1560227CCCF10008476C /* LinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksModel.swift; sourceTree = "<group>"; };
 		FADE1562227CD9B30008476C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		FADE1564227CF4BC0008476C /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
+		FADE1568227DC19F0008476C /* Movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Movie.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 		FA8443312278AACD00DC3CC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FADE1564227CF4BC0008476C /* movie.mov */,
+				FADE1568227DC19F0008476C /* Movie.mov */,
 				FA8443262278A1F100DC3CC1 /* Assets.xcassets */,
 				FA84432B2278A1F100DC3CC1 /* Info.plist */,
 			);
@@ -247,7 +247,7 @@
 				FA84432A2278A1F100DC3CC1 /* LaunchScreen.storyboard in Resources */,
 				FA844343227B47B200DC3CC1 /* MyCV.storyboard in Resources */,
 				FADE155F227C929B0008476C /* ExperienceAndCoursesCell.xib in Resources */,
-				FADE1565227CF4BC0008476C /* movie.mov in Resources */,
+				FADE1569227DC19F0008476C /* Movie.mov in Resources */,
 				FADE155B227C92760008476C /* KeyInfoCell.xib in Resources */,
 				FA8443362279C43200DC3CC1 /* Walkthrough.storyboard in Resources */,
 				FA84434E227B4FDE00DC3CC1 /* MyCVTableViewCell.xib in Resources */,

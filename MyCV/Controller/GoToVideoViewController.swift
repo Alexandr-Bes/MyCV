@@ -29,11 +29,11 @@ class GoToVideoViewController: UIViewController {
     private func setupUI() {
         playButton.layer.cornerRadius = 12
         playButton.clipsToBounds = true
-        showDefaultAlert(title: "Hi there!", message: "Here is the video of my finished projects. To tell the truth, it is the main issue why my project is so big, so just press the play button and enjoy the video 🙃")
+        showDefaultAlert(title: "Hi there!", message: "Here is the video of my finished projects. To tell the truth, it is the main issue why my project is a little big. Just press the play button and enjoy the video 🙃")
     }
 
     private func playVideo() {
-        guard let path = Bundle.main.path(forResource: "movie", ofType: "mov") else {
+        guard let path = Bundle.main.path(forResource: "Movie", ofType: "mov") else {
             debugPrint("Video not found")
             showDefaultAlert(title: "Oops", message: "Something went wrong and unfortunately the video not found 😥")
             return
