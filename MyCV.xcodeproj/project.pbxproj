@@ -36,7 +36,7 @@
 		FADE1561227CCCF10008476C /* LinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1560227CCCF10008476C /* LinksModel.swift */; };
 		FADE1563227CD9B30008476C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1562227CD9B30008476C /* UIViewController+Extension.swift */; };
 		FADE1569227DC19F0008476C /* Movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = FADE1568227DC19F0008476C /* Movie.mov */; };
-		FADE156F227DCA3A0008476C /* myCVVideo.gif in Resources */ = {isa = PBXBuildFile; fileRef = FADE156E227DCA3A0008476C /* myCVVideo.gif */; };
+		FADE1571227DD39A0008476C /* appMovie.gif in Resources */ = {isa = PBXBuildFile; fileRef = FADE1570227DD39A0008476C /* appMovie.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +71,7 @@
 		FADE1560227CCCF10008476C /* LinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksModel.swift; sourceTree = "<group>"; };
 		FADE1562227CD9B30008476C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FADE1568227DC19F0008476C /* Movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Movie.mov; sourceTree = "<group>"; };
-		FADE156E227DCA3A0008476C /* myCVVideo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = myCVVideo.gif; sourceTree = "<group>"; };
+		FADE1570227DD39A0008476C /* appMovie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = appMovie.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 		FA8443312278AACD00DC3CC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FADE156E227DCA3A0008476C /* myCVVideo.gif */,
+				FADE1570227DD39A0008476C /* appMovie.gif */,
 				FADE1568227DC19F0008476C /* Movie.mov */,
 				FA8443262278A1F100DC3CC1 /* Assets.xcassets */,
 				FA84432B2278A1F100DC3CC1 /* Info.plist */,
@@ -246,13 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA844345227B4AB000DC3CC1 /* ProjectsVideo.storyboard in Resources */,
+				FADE1571227DD39A0008476C /* appMovie.gif in Resources */,
 				FA844354227B97F900DC3CC1 /* LinksTableViewCell.xib in Resources */,
 				FA84432A2278A1F100DC3CC1 /* LaunchScreen.storyboard in Resources */,
 				FA844343227B47B200DC3CC1 /* MyCV.storyboard in Resources */,
 				FADE155F227C929B0008476C /* ExperienceAndCoursesCell.xib in Resources */,
 				FADE1569227DC19F0008476C /* Movie.mov in Resources */,
 				FADE155B227C92760008476C /* KeyInfoCell.xib in Resources */,
-				FADE156F227DCA3A0008476C /* myCVVideo.gif in Resources */,
 				FA8443362279C43200DC3CC1 /* Walkthrough.storyboard in Resources */,
 				FA84434E227B4FDE00DC3CC1 /* MyCVTableViewCell.xib in Resources */,
 				FA8443272278A1F100DC3CC1 /* Assets.xcassets in Resources */,
