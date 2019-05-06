@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class MyCVViewController: UIViewController, UITableViewDataSource {
+class MyCVViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Properties
     private struct Constants {
@@ -17,10 +17,10 @@ class MyCVViewController: UIViewController, UITableViewDataSource {
         static let walkthroughContentVCId = "WalkthroughContentViewController"
         static let walkthroughVCId = "WalkthroughViewController"
     }
-    let generalInfo = GeneralInfo()
-    let keyInfo = KeyInfo()
-    let expInfo = Experience()
-    let coursesInfo = Courses()
+    private let generalInfo = GeneralInfo()
+    private let keyInfo = KeyInfo()
+    private let expInfo = Experience()
+    private let coursesInfo = Courses()
 
     // MARK: - Outlets
     @IBOutlet weak var myCVTableView: UITableView!

@@ -47,6 +47,12 @@ class LinksViewController: UIViewController, UITableViewDataSource, UITableViewD
         guard let url = URL(string: links.linksArray[indexPath.row]) else { return }
         let svc = SFSafariViewController(url: url)
         present(svc, animated: true, completion: nil)
+        // Checking for an internet connection
+        if Reachability.isConnectedToNetwork() {
+            print("Connected")
+        } else {
+            showDefaultAlert(title: "Sorry", message: "You have no internet connection.")
+        }
     }
 
     private func setupUI() {

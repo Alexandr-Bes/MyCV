@@ -11,10 +11,14 @@ import UIKit
 class KeyInfoCell: UITableViewCell {
 
     // MARK: - Outlets
-    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstLabel: UILabel! {
+        didSet {
+            firstLabel.numberOfLines = 2
+        }
+    }
     @IBOutlet weak var secondLabel: UILabel! {
         didSet {
-            secondLabel.numberOfLines = 3
+            secondLabel.numberOfLines = 0
         }
     }
     @IBOutlet weak var thirdLabel: UILabel!

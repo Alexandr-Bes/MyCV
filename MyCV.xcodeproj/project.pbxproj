@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1D63352280449200C2AA13 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D63342280449100C2AA13 /* InternetConnection.swift */; };
 		FA8443202278A1EE00DC3CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84431F2278A1EE00DC3CC1 /* AppDelegate.swift */; };
 		FA8443222278A1EE00DC3CC1 /* MyCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8443212278A1EE00DC3CC1 /* MyCVViewController.swift */; };
 		FA8443252278A1EE00DC3CC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8443232278A1EE00DC3CC1 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1D63342280449100C2AA13 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		FA84431C2278A1EE00DC3CC1 /* MyCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA84431F2278A1EE00DC3CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8443212278A1EE00DC3CC1 /* MyCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCVViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		FA8443312278AACD00DC3CC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA1D63342280449100C2AA13 /* InternetConnection.swift */,
 				FADE1570227DD39A0008476C /* appMovie.gif */,
 				FADE1568227DC19F0008476C /* Movie.mov */,
 				FA8443262278A1F100DC3CC1 /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				FA8443382279EDF600DC3CC1 /* WalkthroughContentViewController.swift in Sources */,
 				FADE155E227C929B0008476C /* ExperienceAndCoursesCell.swift in Sources */,
 				FA8443222278A1EE00DC3CC1 /* MyCVViewController.swift in Sources */,
+				FA1D63352280449200C2AA13 /* InternetConnection.swift in Sources */,
 				FADE155A227C92760008476C /* KeyInfoCell.swift in Sources */,
 				FA844350227B8D4700DC3CC1 /* GoToVideoViewController.swift in Sources */,
 				FA84433D227A4F2E00DC3CC1 /* WalkthroughPageViewController.swift in Sources */,
