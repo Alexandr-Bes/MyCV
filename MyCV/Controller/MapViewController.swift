@@ -8,16 +8,30 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView!
+
+    // MARK: - Private properties
+    let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         showDefaultAlert(title: "Just smth about me", message: "Here are the cities I've been to. There are few but I've visited much of them for the last 2 years. So everything is in a potential🙂")
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let currentLocation = locations.last {
+            print("Current location is: \(currentLocation)")
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 
     // MARK: - Private Methods
@@ -26,6 +40,26 @@ class MapViewController: UIViewController {
         let coordinate = CLLocationCoordinate2D(latitude: 54.5260, longitude: 15.2551)
         mapView.setCenter(coordinate, animated: true)
         mapView.addAnnotations(annotations)
+        getLocation()
+    }
+
+    private func getLocation() {
+        let status = CLLocationManager.authorizationStatus()
+        switch status {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            return
+        case .denied, .restricted:
+            showDefaultAlert(title: "Location Services disabled", message: "Please enable Location Services in Settings")
+            return
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        @unknown default:
+            break
+        }
+
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
     }
 
     private func setPoints() -> [MKAnnotation] {
