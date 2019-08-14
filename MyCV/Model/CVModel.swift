@@ -15,7 +15,7 @@ struct GeneralInfo {
 
     init() {
         self.name = "Alexander Bezkopylnyi"
-        self.phone = "380663343777"
+        self.phone = "+380663343777"
         self.email = "sanok.bes@gmail.com"
     }
 }
@@ -43,7 +43,7 @@ struct KeyInfo {
         let workDescription: String
 
         init() {
-            self.position = "Junior iOS Developer (3 months)"
+            self.position = "iOS Developer (6 months)"
             self.workDescription = "Developing a client-server application for showing news, streaming media, a video broadcast on Apple TV/Google Cast."
         }
     }

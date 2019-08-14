@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class MyCVViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MyCVViewController: UIViewController {
 
     // MARK: - Properties
     private struct Constants {
@@ -40,7 +40,22 @@ class MyCVViewController: UIViewController, UITableViewDataSource, UITableViewDe
         present(walkthroughVC, animated: true, completion: nil)
     }
 
-    // MARK: - Table View Data Source Methods
+    // MARK: Private Methods
+    private func setupUI() {
+        myCVTableView.dataSource = self
+        myCVTableView.register(UINib(nibName: MyCVTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MyCVTableViewCell.identifier)
+        myCVTableView.register(UINib(nibName: KeyInfoCell.identifier, bundle: nil), forCellReuseIdentifier: KeyInfoCell.identifier)
+        myCVTableView.register(UINib(nibName: ExperienceAndCoursesCell.identifier, bundle: nil), forCellReuseIdentifier: ExperienceAndCoursesCell.identifier)
+        myCVTableView.allowsSelection = false
+    }
+
+
+}
+
+
+// MARK: - Table View Data Source Methods
+extension MyCVViewController: UITableViewDataSource {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
@@ -109,15 +124,4 @@ class MyCVViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return ""
     }
 
-    // MARK: Private Methods
-    private func setupUI() {
-        myCVTableView.dataSource = self
-        myCVTableView.register(UINib(nibName: MyCVTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MyCVTableViewCell.identifier)
-        myCVTableView.register(UINib(nibName: KeyInfoCell.identifier, bundle: nil), forCellReuseIdentifier: KeyInfoCell.identifier)
-        myCVTableView.register(UINib(nibName: ExperienceAndCoursesCell.identifier, bundle: nil), forCellReuseIdentifier: ExperienceAndCoursesCell.identifier)
-        myCVTableView.allowsSelection = false
-    }
-
-
 }
-

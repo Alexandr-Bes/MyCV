@@ -83,6 +83,5 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         }
     }
 
-    // MARK: - Navigation
 
 }

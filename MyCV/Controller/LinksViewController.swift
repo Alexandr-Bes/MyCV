@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class LinksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LinksViewController: UIViewController {
 
     @IBOutlet weak var linksTableView: UITableView!
 
@@ -28,7 +28,19 @@ class LinksViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
 
-    // MARK: - Table View Data Source Methods
+    private func setupUI() {
+        linksTableView.dataSource = self
+        linksTableView.delegate = self
+        //Register for LinksTableViewCell.xib
+        linksTableView.register(UINib(nibName: LinksTableViewCell.identifier, bundle: .none), forCellReuseIdentifier: LinksTableViewCell.identifier)
+        linksTableView.tableFooterView = UIView(frame: .zero)
+    }
+
+}
+
+// MARK: - Table View Data Source Methods
+extension LinksViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return imageArray.count
     }
@@ -41,12 +53,16 @@ class LinksViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.linkLabel.text = links.linksArray[indexPath.row]
         return cell
     }
+}
 
-    // MARK: - Table View Delegate Methods
+// MARK: - Table View Delegate Methods
+extension LinksViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let url = URL(string: links.linksArray[indexPath.row]) else { return }
         let svc = SFSafariViewController(url: url)
         present(svc, animated: true, completion: nil)
+
         // Checking for an internet connection
         if Reachability.isConnectedToNetwork() {
             print("Connected")
@@ -54,13 +70,4 @@ class LinksViewController: UIViewController, UITableViewDataSource, UITableViewD
             showDefaultAlert(title: "Sorry", message: "You have no internet connection.")
         }
     }
-
-    private func setupUI() {
-        linksTableView.dataSource = self
-        linksTableView.delegate = self
-        //Register for LinksTableViewCell.xib
-        linksTableView.register(UINib(nibName: LinksTableViewCell.identifier, bundle: .none), forCellReuseIdentifier: LinksTableViewCell.identifier)
-        linksTableView.tableFooterView = UIView(frame: .zero)
-    }
-
 }

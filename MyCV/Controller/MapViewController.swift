@@ -10,28 +10,18 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView!
 
-    // MARK: - Private properties
+    // MARK: - Private Properties
     let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         showDefaultAlert(title: "Just smth about me", message: "Here are the cities I've been to. There are few but I've visited much of them for the last 2 years. So everything is in a potential🙂")
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let currentLocation = locations.last {
-            print("Current location is: \(currentLocation)")
-        }
-    }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
     }
 
     // MARK: - Private Methods
@@ -106,4 +96,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         return annotations
     }
 
+}
+
+// MARK: - CLLocationManager Delegate Methods
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let currentLocation = locations.last {
+            print("Current location is: \(currentLocation)")
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
 }
